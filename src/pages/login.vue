@@ -4,7 +4,6 @@
     <el-col :lg="16" :md="12" class="all-center">
       <div class="left">
         <div>欢迎登录</div>
-        <!-- <div>wwwwwwwwwwwwwwwwwwwwwwwww</div> -->
       </div>
     </el-col>
     <!-- 右边 -->
