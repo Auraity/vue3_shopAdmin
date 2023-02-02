@@ -2,10 +2,10 @@
   <div class="f-header">
     <span class="logo">
       <el-icon class="mr-1"><ElemeFilled /></el-icon>
-      帝莎编程
+      vue3管理系统
     </span>
     <el-icon class="icon-btn" @click="$store.commit('handleAsideWidth')">
-      <Fold v-if="$store.state.asideWidth=='250px'" />
+      <Fold v-if="$store.state.asideWidth == '250px'" />
       <Expand v-else />
     </el-icon>
     <el-tooltip effect="dark" content="刷新" placement="bottom">
@@ -83,6 +83,7 @@ const handleRefresh = () => location.reload()
 .f-header {
   @apply flex items-center bg-cyan-600 text-light-50 fixed top-0 left-0 right-0;
   height: 64px;
+  z-index: 1000;
 }
 .logo {
   width: 250px;
