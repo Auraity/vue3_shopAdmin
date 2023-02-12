@@ -40,8 +40,10 @@ const handleChoose = (type) => {
 let myChart = null
 onMounted(() => {
   var charDom = document.getElementById('chart')
-  myChart = echarts.init(charDom)
-  getDate()
+  if (charDom) {
+    myChart = echarts.init(charDom)
+    getDate()
+  }
 })
 
 onBeforeUnmount(() => {

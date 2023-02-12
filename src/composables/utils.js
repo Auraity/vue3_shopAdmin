@@ -2,7 +2,7 @@ import { ElNotification, ElMessage, ElMessageBox } from 'element-plus'
 import nProgress from 'nprogress'
 
 // 消息提示
-export function toast(message, type = 'success', dangerouslyUseHTMLString = false) {
+export function toast(message, type = 'success', dangerouslyUseHTMLString = true) {
   // ElNotification({
   //   message,
   //   type,
@@ -37,4 +37,13 @@ export function showFullLoading() {
 // 隐藏全屏loading
 export function hideFullLoading() {
   nProgress.done()
+}
+
+// 弹出输入框
+export function showPrompt(tip, value = '') {
+  return ElMessageBox.prompt(tip, '', {
+    confirmButtonText: '确认',
+    cancelButtonText: '取消',
+    inputValue: value
+  })
 }
